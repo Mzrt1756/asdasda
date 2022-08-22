@@ -1,0 +1,6 @@
+
+.carouselImg{
+    object-fit: cover;
+    max-height: 500px;
+    min-height: 250px;
+}
