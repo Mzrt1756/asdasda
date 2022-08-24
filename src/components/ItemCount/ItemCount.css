@@ -1,7 +1,7 @@
 .rowContador{
-    height: 30px;
-    margin-bottom: 30px;
     background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
 }
 
 .colButton{
@@ -11,9 +11,9 @@
     color: rgba(51, 51, 51,1);
     font-size: 25px;
     height: 30px;
-
 }
 
 .colContador{
     text-align: center;
 }
+

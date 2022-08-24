@@ -7,9 +7,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './ItemCount.css'
 
 export const ItemCount = ({stock, initial, onAdd}) =>{
-    const [contador, setContador] = useState(Number(initial));
+    const [contador, setContador] = useState(initial);
     const incrementarProducto = () =>{
-        if(contador===Number(stock)){
+        if(contador===stock){
             setContador(contador)
         }else{
             setContador(contador+1)
@@ -22,6 +22,11 @@ export const ItemCount = ({stock, initial, onAdd}) =>{
             setContador(contador-1)
         }
     }
+
+    onAdd = () =>{
+        console.log(contador)
+    }
+
     return(
         <Container>
             <Row className="rowContador align-items-center">
@@ -29,6 +34,10 @@ export const ItemCount = ({stock, initial, onAdd}) =>{
                 <Col className="colContador">{contador}</Col>
                 <Button className="col colButton d-flex align-items-center justify-content-center" onClick={incrementarProducto}>+</Button>
             </Row>           
+            <Row>
+            <Button className="agregarCarritoContador mt-2 p-1" onClick={onAdd} variant="secondary">Agregar al Carrito</Button>
+            </Row>
+            
         </Container>
     )
 }
