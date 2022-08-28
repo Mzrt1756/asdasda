@@ -1,5 +1,6 @@
 import { IconContext } from "react-icons";
 import {FaShoppingCart} from 'react-icons/fa';
+import { Button } from "react-bootstrap";
 import './CartWidget.css';
 
 export const CartWidget = () => {
@@ -7,6 +8,7 @@ export const CartWidget = () => {
         <IconContext.Provider value={{className: "react-icons" }}>
             <div>
                 <a href="#home"><FaShoppingCart/></a>
+                <Button className="contCarrito">1</Button>
             </div>
         </IconContext.Provider>
     )

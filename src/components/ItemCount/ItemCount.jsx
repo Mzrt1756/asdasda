@@ -23,10 +23,6 @@ export const ItemCount = ({stock, initial, onAdd}) =>{
         }
     }
 
-    onAdd = () =>{
-        console.log(contador)
-    }
-
     return(
         <Container>
             <Row className="rowContador align-items-center">
@@ -35,7 +31,7 @@ export const ItemCount = ({stock, initial, onAdd}) =>{
                 <Button className="col colButton d-flex align-items-center justify-content-center" onClick={incrementarProducto}>+</Button>
             </Row>           
             <Row>
-            <Button className="agregarCarritoContador mt-2 p-1" onClick={onAdd} variant="secondary">Agregar al Carrito</Button>
+            <Button className="agregarCarritoContador mt-2 p-1" onClick={()=>(onAdd(contador))} variant="secondary">Agregar al Carrito</Button>
             </Row>
             
         </Container>
