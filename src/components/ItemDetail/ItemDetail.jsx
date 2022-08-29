@@ -13,7 +13,7 @@ export const ItemDetail = () => {
     useEffect(()=> {
         getFetch
         .then(response => {
-            setData(response.find(prod => prod.id === 1))
+            setData(response.find(prod => prod.id === 5))
             setLoading(false)
         })      
     }, [])
