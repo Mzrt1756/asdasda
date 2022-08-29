@@ -1,11 +1,10 @@
 import { Container } from "react-bootstrap"
-import { Item } from "../Item/Item"
-
+import { ItemList } from "../ItemList/ItemList"
 
 export const ItemListContainer = () => {
     return(
-        <Container className="py-3">
-            <Item/>
+        <Container fluid className="py-3">
+            <ItemList/>
         </Container>
         
     )

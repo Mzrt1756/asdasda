@@ -4,10 +4,10 @@
 }
 
 .contCarrito{
-    color: white;
-    background-color: red;
-    height: 5px;
-    width: 5px;
-    position: relative;
-
+    font-size: 10px;
+    background: #6c757d;
+    color: #fff;
+    padding: 0 5px;
+    vertical-align: top;
+    border-radius: 100%;
 }

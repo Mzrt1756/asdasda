@@ -1,0 +1,9 @@
+.itemListTitle{
+    text-align: center;
+}
+
+.rowItemList{
+    display: flex;
+    justify-content: center;
+    padding: 0 20px 20xp 20px;
+}

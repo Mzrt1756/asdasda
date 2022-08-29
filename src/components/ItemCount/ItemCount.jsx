@@ -31,7 +31,7 @@ export const ItemCount = ({stock, initial, onAdd}) =>{
                 <Button className="col colButton d-flex align-items-center justify-content-center" onClick={incrementarProducto}>+</Button>
             </Row>           
             <Row>
-            <Button className="agregarCarritoContador mt-2 p-1" onClick={()=>(onAdd(contador))} variant="secondary">Agregar al Carrito</Button>
+            <Button className="agregarCarritoContador mt-2 p-1" onClick={()=>(onAdd(contador))} variant="outline-secondary">Agregar al Carrito</Button>
             </Row>
             
         </Container>

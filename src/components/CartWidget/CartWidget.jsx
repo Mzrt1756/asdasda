@@ -8,7 +8,7 @@ export const CartWidget = () => {
         <IconContext.Provider value={{className: "react-icons" }}>
             <div>
                 <a href="#home"><FaShoppingCart/></a>
-                <Button className="contCarrito">1</Button>
+                <Button variant="secondary" className="contCarrito">1</Button>
             </div>
         </IconContext.Provider>
     )
