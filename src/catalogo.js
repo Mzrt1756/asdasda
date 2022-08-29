@@ -16,7 +16,7 @@ const catalogoDeProductos = [
         precio : 2700,
         peso: "250g",
         img: [cafeBourbon],
-        descripcion: "",
+        descripcion: "Alta Mogiana es una región tradicional que cubre el noreste del Estado de Sao Paulo y algunas ciudades en el Estado de Minas de Gerais. Las excelentes condiciones naturales como la altitud, el clima y las lluvias ideales, como una amplia experiencia en producción y procesos especiales de secado en patios con descanso de 30 días, propios del café de especialidad, dan como resultado un determinado perfil de taza con un perfecto balance de dulzor y acidez de fragancias dulces caramelizadas. Perfecto para nuestro café de tolva, tanto para disfrutar solo como con leche.",
         categoria: "Café"
     },
     {

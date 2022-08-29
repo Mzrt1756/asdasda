@@ -5,6 +5,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Logo from '../../assets/Coffee-shop-logo.png'
 import {CartWidget} from '../CartWidget/CartWidget'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './NavBarRis.css'
 
 function NavBarRis() {
   return (
@@ -18,7 +19,7 @@ function NavBarRis() {
               height="30"
               className="d-inline-block align-top"
             />{' '}
-            Ristretto Coffee House
+            <p className='d-inline-block m-auto brandText'>Ristretto Coffee House</p> 
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll" >

@@ -2,7 +2,9 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBarRis from './components/NavBarRis/NavBarRis';
 import {ItemListContainer} from './components/ItemListContainer/ItemListContainer'
+import {ItemDetailContainer} from './components/ItemDetailContainer/ItemDetailContainer'
 import {CarouselHome} from './components/CarouselHome/CarouselHome'
+import {Footer} from './components/Footer/Footer';
 //import { ItemCount } from "./components/ItemCount/ItemCount"
 
 function App() {
@@ -16,7 +18,8 @@ function App() {
         <NavBarRis></NavBarRis>
         <CarouselHome/>
         <ItemListContainer/>
-        
+        <ItemDetailContainer/>
+        <Footer/>
       </header>
     </div>
   );

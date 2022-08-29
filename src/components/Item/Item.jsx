@@ -4,7 +4,7 @@ import './Item.css'
 
 export const Item = ({data}) => {
     return(
-        <Card className='centrarTarjeta' style={{width: "20rem", margin:"20px"}} key={data.nombre}>
+        <Card className='centrarTarjeta' style={{ margin:"20px"}} key={data.nombre}>
         <Card.Img variant="top" src={data.img}/>
         <Card.Body className='cardBody'>
           <Card.Title>{data.nombre}</Card.Title>

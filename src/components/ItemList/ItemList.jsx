@@ -1,6 +1,7 @@
 import {useState,useEffect} from 'react';
 import {getFetch} from '../../catalogo';
 import {Item} from '../Item/Item';
+import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Spinner from 'react-bootstrap/Spinner';
@@ -23,20 +24,22 @@ export const ItemList = () => {
         </Container>
         {
             loading ? 
-            
-            <Spinner animation="border" role="loading">
-                <span className="visually-hidden">Loading...</span>
-            </Spinner>
+            <Row className='rowItemSpinner'>
+                <Spinner animation="border" role="status"  style={{ width: "10rem", height: "10rem"}}>
+                     <span className="visually-hidden">Loading...</span>
+                </Spinner>
+            </Row>
             
             :
             
-            <Container fluid>
-                <Row className='rowItemList'>
-                        {data.map(data => (
-                                <Item key={data.nombre} data={data}/>
-                        ))}  
-                </Row>
-            </Container>
+            <Row xs={1} sm={2} md={2} lg={3} xl={4} className="g-4">
+                {data.map(data => (
+                    <Col> 
+                        <Item key={data.nombre} data={data}/>
+                    </Col>
+                ))}  
+            </Row>
+
         }
     </Container>
   )
