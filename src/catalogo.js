@@ -109,7 +109,7 @@ const catalogoDeProductos = [
     }
   ]
 
-export const getFetch = new Promise((resolve, reject) => {
+export const getItem = new Promise((resolve, reject) => {
     setTimeout(() => {
         resolve(catalogoDeProductos)
         reject(err => console.log(err))

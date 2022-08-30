@@ -23,6 +23,10 @@ export const ItemCount = ({stock, initial, onAdd}) =>{
         }
     }
 
+    onAdd = (contador) =>{
+        console.log(contador)
+    }
+
     return(
         <Container>
             <Row className="rowContador align-items-center">

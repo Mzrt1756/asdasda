@@ -1,5 +1,6 @@
 import {useState,useEffect} from 'react';
-import {getFetch} from '../../catalogo';
+import {getItem} from '../../catalogo';
+import { ItemCount } from '../ItemCount/ItemCount';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
@@ -7,18 +8,18 @@ import Spinner from 'react-bootstrap/Spinner';
 import './ItemDetail.css'
 
 export const ItemDetail = () => {
-    const [data, setData] = useState({})
+    const [item, setItem] = useState({})
     const [loading, setLoading] = useState(true)
 
     useEffect(()=> {
-        getFetch
+        getItem
         .then(response => {
-            setData(response.find(prod => prod.id === 5))
+            setItem(response.find(prod => prod.id === 2))
             setLoading(false)
         })      
     }, [])
 
-    console.log(data)
+    console.log(item)
     return (
         <Container>
 
@@ -35,15 +36,16 @@ export const ItemDetail = () => {
 
             <Container>
                 <Row>
-                    <Col>
-                        <img src={data.img} alt="" style={{height:'500px'}}/>
+                    <Col className='detailImg d-flex justify-content-center'>
+                        <img src={item.img} alt="" style={{height:'500px'}}/>
                     </Col>
-                    <Col>
-                        <h2>{data.nombre}</h2>
-                        <h3><b>$ {data.precio}</b></h3>
-                        <p><b>Peso: {data.peso}</b></p>
+                    <Col className='detailCol py-5'>
+                        <h2>{item.nombre}</h2>
+                        <h3><b>$ {item.precio}</b></h3>
+                        <p><b>Peso: {item.peso}</b></p>
 
-                        <p>{data.descripcion}</p>
+                        <p>{item.descripcion}</p>
+                        <Container className='itemCountDetail'><ItemCount stock={item.stock} initial={item.initial}/></Container>
                     </Col>
                 </Row>
             </Container>

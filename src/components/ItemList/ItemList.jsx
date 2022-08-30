@@ -1,5 +1,5 @@
 import {useState,useEffect} from 'react';
-import {getFetch} from '../../catalogo';
+import {getItem} from '../../catalogo';
 import {Item} from '../Item/Item';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
@@ -8,20 +8,19 @@ import Spinner from 'react-bootstrap/Spinner';
 import './ItemList.css'
 
 export const ItemList = () => {
-    const [data,setData] = useState([])
+    const [item,setItem] = useState([])
     const [loading,setLoading] = useState(true)
 
     useEffect(()=> {
-        getFetch.then(data => {
-            setData(data)
+        getItem
+            .then(item => {
+            setItem(item)
             setLoading(false)
         })
     }, [])
+
   return (
     <Container fluid>
-        <Container>
-            <h1 className='itemListTitle'>TIENDA</h1>
-        </Container>
         {
             loading ? 
             <Row className='rowItemSpinner'>
@@ -33,9 +32,9 @@ export const ItemList = () => {
             :
             
             <Row xs={1} sm={2} md={2} lg={3} xl={4} className="g-4">
-                {data.map(data => (
+                {item.map(item => (
                     <Col> 
-                        <Item key={data.nombre} data={data}/>
+                        <Item key={item.nombre} item={item}/>
                     </Col>
                 ))}  
             </Row>

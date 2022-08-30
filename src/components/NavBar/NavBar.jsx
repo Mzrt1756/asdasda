@@ -5,11 +5,11 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Logo from '../../assets/Coffee-shop-logo.png'
 import {CartWidget} from '../CartWidget/CartWidget'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './NavBarRis.css'
+import './NavBar.css'
 
-function NavBarRis() {
+export const NavBar = () => {
   return (
-    <Navbar bg="light" expand="md" className='px-5'>
+    <Navbar bg="light" expand="md" className='px-5 py-1'>
       <Container fluid className="">
         <Navbar.Brand href="#home">
             <img
@@ -17,7 +17,7 @@ function NavBarRis() {
               src= {Logo}
               width="30"
               height="30"
-              className="d-inline-block align-top"
+              className="d-inline-block align-top navbarImg"
             />{' '}
             <p className='d-inline-block m-auto brandText'>Ristretto Coffee House</p> 
         </Navbar.Brand>
@@ -46,5 +46,3 @@ function NavBarRis() {
     </Navbar>
   );
 }
-
-export default NavBarRis;

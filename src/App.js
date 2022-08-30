@@ -1,6 +1,6 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavBarRis from './components/NavBarRis/NavBarRis';
+import {NavBar} from './components/NavBar/NavBar';
 import {ItemListContainer} from './components/ItemListContainer/ItemListContainer'
 import {ItemDetailContainer} from './components/ItemDetailContainer/ItemDetailContainer'
 import {CarouselHome} from './components/CarouselHome/CarouselHome'
@@ -15,9 +15,9 @@ function App() {
   return (
     <div>
       <header>
-        <NavBarRis></NavBarRis>
+        <NavBar></NavBar>
         <CarouselHome/>
-        <ItemListContainer/>
+        <ItemListContainer bienvenido={"TIENDA"}/>
         <ItemDetailContainer/>
         <Footer/>
       </header>

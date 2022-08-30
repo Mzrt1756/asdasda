@@ -1,0 +1,13 @@
+.itemCountDetail{
+    width: 300px;
+    padding-top: 20px;
+}
+
+@media screen and (max-width:767px){
+    .detailCol{
+        text-align: center;
+        padding-top: 0px !important;
+    }
+
+}
+
