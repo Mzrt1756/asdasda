@@ -1,5 +1,5 @@
 import {useState,useEffect} from 'react';
-import {getItem} from '../../catalogo';
+import {getItem} from '../../catalogo.jsx';
 import { ItemCount } from '../ItemCount/ItemCount';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';

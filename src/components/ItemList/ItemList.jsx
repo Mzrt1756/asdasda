@@ -1,5 +1,5 @@
 import {useState,useEffect} from 'react';
-import {getItem} from '../../catalogo';
+import {getItem} from '../../catalogo.jsx';
 import {Item} from '../Item/Item';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
@@ -20,7 +20,7 @@ export const ItemList = () => {
     }, [])
 
   return (
-    <Container fluid>
+    <Container>
         {
             loading ? 
             <Row className='rowItemSpinner'>
