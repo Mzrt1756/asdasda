@@ -1,41 +1,24 @@
-import {useState,useEffect} from 'react';
-import {getItem} from '../../catalogo.jsx';
+import {useState} from 'react';
 import { ItemCount } from '../ItemCount/ItemCount';
-import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
-import Spinner from 'react-bootstrap/Spinner';
+import Row from 'react-bootstrap/Row';
+
 import './ItemDetail.css'
 
-export const ItemDetail = () => {
-    const [item, setItem] = useState({})
-    const [loading, setLoading] = useState(true)
+export const ItemDetail = ({item}) => {
+    const [numeroItems, setNumeroItems] = useState(0);
 
-    useEffect(()=> {
-        getItem
-        .then(response => {
-            setItem(response.find(prod => prod.id === 2))
-            setLoading(false)
-        })      
-    }, [])
+    const agregarProductoCarrito = (cantidadItem) =>{
+        console.log('Se agregó ' + cantidadItem + ' unidades del item ');
+        setNumeroItems(cantidadItem);
+    }
 
-    console.log(item)
+    console.log(numeroItems);
+
     return (
         <Container>
-
-        {
-            loading ?  
-
-            <Row className='rowItemSpinner'>
-                <Spinner animation="border" role="status"  style={{ width: "10rem", height: "10rem"}}>
-                    <span className="visually-hidden">Loading...</span>
-                </Spinner>
-            </Row>
-
-            :
-
-            <Container>
-                <Row>
+            <Row>
                     <Col className='detailImg d-flex justify-content-center'>
                         <img src={item.img} alt="" style={{height:'500px'}}/>
                     </Col>
@@ -45,12 +28,9 @@ export const ItemDetail = () => {
                         <p><b>Peso: {item.peso}</b></p>
 
                         <p>{item.descripcion}</p>
-                        <Container className='itemCountDetail'><ItemCount stock={item.stock} initial={item.initial}/></Container>
+                        <Container className='itemCountDetail'><ItemCount stock={item.stock} initial={item.initial} onAdd={agregarProductoCarrito}/></Container>
                     </Col>
-                </Row>
-            </Container>
-
-        }
+            </Row>
         </Container>
     )
 }

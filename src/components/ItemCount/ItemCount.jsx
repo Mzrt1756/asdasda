@@ -8,6 +8,7 @@ import './ItemCount.css'
 
 export const ItemCount = ({stock, initial, onAdd}) =>{
     const [contador, setContador] = useState(initial);
+
     const incrementarProducto = () =>{
         if(contador===stock){
             setContador(contador)
@@ -22,11 +23,7 @@ export const ItemCount = ({stock, initial, onAdd}) =>{
             setContador(contador-1)
         }
     }
-
-    onAdd = (contador) =>{
-        console.log(contador)
-    }
-
+    
     return(
         <Container>
             <Row className="rowContador align-items-center">
