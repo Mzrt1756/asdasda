@@ -11,7 +11,7 @@ export const NavBar = () => {
   return (
     <Navbar bg="light" expand="md" className='px-5 py-1'>
       <Container fluid className="">
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
             <img
               alt=""
               src= {Logo}
@@ -28,16 +28,14 @@ export const NavBar = () => {
             style={{ maxHeight: '230px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Inicio</Nav.Link>
-            <Nav.Link href="#action2">Tienda</Nav.Link>
-            <Nav.Link href="#action3">Mayorista</Nav.Link>
+            <Nav.Link href="/">Inicio</Nav.Link>
+            <Nav.Link href="/">Tienda</Nav.Link>
+            <Nav.Link href="/mayorista">Mayorista</Nav.Link>
             <NavDropdown title="Nosotros" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action4">¿Quiénes Somos?</NavDropdown.Item>
-              <NavDropdown.Item href="#action5">
-                Orígenes
-              </NavDropdown.Item>
+              <NavDropdown.Item href="/quienessomos">¿Quiénes Somos?</NavDropdown.Item>
+              <NavDropdown.Item href="/origenes">Orígenes</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#action6">Contacto</Nav.Link>
+            <Nav.Link href="/contacto">Contacto</Nav.Link>
             <CartWidget/>
           </Nav>
         </Navbar.Collapse>

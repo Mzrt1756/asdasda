@@ -1,23 +1,31 @@
 import { useState,useEffect } from 'react';
-import { Col, Container } from "react-bootstrap"
+import { Row, Col, Container, Spinner } from "react-bootstrap"
 import { getItem } from '../../catalogo.jsx';
 import { ItemList } from "../ItemList/ItemList"
-import Row from 'react-bootstrap/Row';
-import Spinner from 'react-bootstrap/Spinner';
+import {Link} from 'react-router-dom'
+import {useParams} from 'react-router-dom'
+ 
 import './ItemListContainer.css'
 
 export const ItemListContainer = () => {
-
     const [item,setItem] = useState([])
     const [loading,setLoading] = useState(true)
+    const {id} = useParams();
 
     useEffect(()=> {
         getItem
             .then(item => {
-            setItem(item)
-            setLoading(false)
-        })
-    }, [])
+                if (!id || id === "vertodos"){
+                    setItem(item)
+                } else {
+                    const categoriaProd = item.filter(prod=>prod.categoria === id)
+                    console.log('categoria', categoriaProd)
+                    setItem(categoriaProd)
+                    setLoading(false)
+                }
+            })
+    }, [id])
+
 
     return(
         <Container fluid className="py-3">
@@ -35,15 +43,17 @@ export const ItemListContainer = () => {
                 
                 :
 
-                <Row>
-                    <Col>
-                        <a href="">Café</a>
-                        <a href="">Cafeteras</a>
-                        <a href="">Accesorios</a>
-                        <a href="">Cursos</a>
-                    </Col>
-                    <ItemList item={item}/>
-                </Row>
+                <Container>
+                    <Row>
+                        <Col className='colCategorias'><Link className='linksCategorias' to="/category/cafe">Café</Link></Col>   
+                        <Col className='colCategorias'><Link className='linksCategorias' to="/category/cafeteras">Cafeteras</Link></Col> 
+                        <Col className='colCategorias'><Link className='linksCategorias' to="/category/accesorios">Accesorios</Link></Col> 
+                        <Col className='colCategorias'><Link className='linksCategorias' to="/category/cursos">Cursos</Link></Col>
+                        <Col className='colCategorias'><Link className='linksCategorias' to="/category/vertodos">Ver Todos</Link></Col>                                 
+                        <ItemList item={item}/>
+                    </Row>
+                </Container>
+                
                 
                 
             }

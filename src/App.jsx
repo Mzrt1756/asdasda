@@ -6,25 +6,35 @@ import {ItemListContainer} from './components/ItemListContainer/ItemListContaine
 import {ItemDetailContainer} from './components/ItemDetailContainer/ItemDetailContainer'
 import {CarouselHome} from './components/CarouselHome/CarouselHome'
 import {Footer} from './components/Footer/Footer';
+import { Contacto } from './components/Contacto/Contacto';
+import { Carrito } from './components/Carrito/Carrito';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import { Tienda } from './components/Tienda/Tienda';
+import { Mayorista } from './components/Mayorista/Mayorista';
+import { QuienesSomos } from './components/QuienesSomos/QuienesSomos';
+import { Origenes } from './components/Origenes/Origenes';
+import { PaginaError } from './components/PaginaError/PaginaError';
 
 function App() {
   return (
     <BrowserRouter>
-          <nav>
-            <NavBar/>
-          </nav>
-          <section>
-            <CarouselHome/>
-          </section>
-          <section>
-            <ItemListContainer/>
-            <ItemDetailContainer/>
-          </section>
-          <footer>
-            <Footer/>
-          </footer>
-
+      <div>
+        <NavBar/>
+        <CarouselHome/>
+        <Routes>
+          <Route exact path='/' element={<ItemListContainer/>}></Route>
+          <Route exact path='/category/:categoria' element={<ItemListContainer/>}></Route>
+          <Route exact path='/item/:id' element={<ItemDetailContainer/>}></Route>
+          <Route exact path='/tienda' element={<Tienda/>}></Route>
+          <Route exact path='/mayorista' element={<Mayorista/>}></Route>
+          <Route exact path='/quienessomos' element={<QuienesSomos/>}></Route>
+          <Route exact path='/origenes' element={<Origenes/>}></Route>
+          <Route exact path='/contacto' element={<Contacto/>}></Route>
+          <Route exact path='/carrito' element={<Carrito/>}></Route>   
+          <Route path='*' element={<PaginaError/>}></Route>       
+        </Routes>
+        <Footer/>
+      </div>
     </BrowserRouter>
   );
 }
