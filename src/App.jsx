@@ -25,7 +25,7 @@ function App() {
           <Route exact path='/' element={<ItemListContainer/>}></Route>
           <Route exact path='/category' element={<ItemListContainer/>}></Route>
           <Route exact path='/category/:categoriaProd' element={<ItemListContainer/>}></Route>
-          {/* <Route exact path='/item/:id' element={<ItemDetailContainer/>}></Route> */}
+          <Route exact path='/item/:idItem' element={<ItemDetailContainer/>}></Route>
           <Route exact path='/tienda' element={<Tienda/>}></Route>
           <Route exact path='/mayorista' element={<Mayorista/>}></Route>
           <Route exact path='/quienessomos' element={<QuienesSomos/>}></Route>

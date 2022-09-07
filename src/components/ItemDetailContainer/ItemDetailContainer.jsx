@@ -1,23 +1,26 @@
 import {useState,useEffect} from 'react';
-import {getItem} from '../../catalogo.jsx';
+import {getItemId} from '../../catalogo.jsx';
 import { ItemDetail } from "../ItemDetail/ItemDetail"
 import { Container } from "react-bootstrap"
 import Row from 'react-bootstrap/Row';
 import Spinner from 'react-bootstrap/Spinner';
+import {useParams} from 'react-router-dom';
 
 
 export const ItemDetailContainer = () => {
+    const {idItem} = useParams();
+    console.log(idItem);
     const [item, setItem] = useState({})
     const [loading, setLoading] = useState(true)
 
     useEffect(()=> {
-        getItem
-        .then(response => {
-            setItem(response.find(prod => prod.id === 2))
+        getItemId(idItem)
+        .then(resultado => {
+            setItem(resultado)
             setLoading(false)
         })      
-    }, [])
-   
+    }, [idItem])
+
     return (
         <Container>
 

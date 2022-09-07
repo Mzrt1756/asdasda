@@ -149,3 +149,9 @@ export const getItem = new Promise((resolve, reject) => {
     }, 2000)
 })
 
+export const getItemId = (id) =>{
+   return new Promise((resolve, reject) => {
+      const prod = catalogoDeProductos.find(item=>item.id === parseInt(id))
+      resolve(prod)
+   })
+} 
