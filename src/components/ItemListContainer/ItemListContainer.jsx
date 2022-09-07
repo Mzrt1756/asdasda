@@ -2,29 +2,30 @@ import { useState,useEffect } from 'react';
 import { Row, Col, Container, Spinner } from "react-bootstrap"
 import { getItem } from '../../catalogo.jsx';
 import { ItemList } from "../ItemList/ItemList"
-import {Link} from 'react-router-dom'
+// import {Link} from 'react-router-dom'
 import {useParams} from 'react-router-dom'
- 
 import './ItemListContainer.css'
 
 export const ItemListContainer = () => {
+    const {categoriaProd} = useParams();
+    console.log(categoriaProd)
     const [item,setItem] = useState([])
     const [loading,setLoading] = useState(true)
-    const {id} = useParams();
 
-    useEffect(()=> {
+    useEffect(()=>{
         getItem
-            .then(item => {
-                if (!id || id === "vertodos"){
-                    setItem(item)
-                } else {
-                    const categoriaProd = item.filter(prod=>prod.categoria === id)
-                    console.log('categoria', categoriaProd)
-                    setItem(categoriaProd)
-                    setLoading(false)
-                }
-            })
-    }, [id])
+            .then(resultado=>{
+            if(categoriaProd !== "café" && categoriaProd !== "cafeteras" && categoriaProd !== "accesorios" && categoriaProd !== "cursos"){
+                setItem(resultado)
+                setLoading(false)
+            } else{
+                const nuevaLista = resultado.filter(item=>item.categoria === categoriaProd);
+                console.log('nuevaLista',nuevaLista)
+                setItem(nuevaLista)
+                setLoading(false)
+            }
+        })
+    },[categoriaProd])
 
 
     return(
@@ -45,11 +46,11 @@ export const ItemListContainer = () => {
 
                 <Container>
                     <Row>
-                        <Col className='colCategorias'><Link className='linksCategorias' to="/category/cafe">Café</Link></Col>   
+                        {/* <Col className='colCategorias'><Link className='linksCategorias' to="/category/cafe">Café</Link></Col>   
                         <Col className='colCategorias'><Link className='linksCategorias' to="/category/cafeteras">Cafeteras</Link></Col> 
                         <Col className='colCategorias'><Link className='linksCategorias' to="/category/accesorios">Accesorios</Link></Col> 
                         <Col className='colCategorias'><Link className='linksCategorias' to="/category/cursos">Cursos</Link></Col>
-                        <Col className='colCategorias'><Link className='linksCategorias' to="/category/vertodos">Ver Todos</Link></Col>                                 
+                        <Col className='colCategorias'><Link className='linksCategorias' to="/category/vertodos">Ver Todos</Link></Col>                                  */}
                         <ItemList item={item}/>
                     </Row>
                 </Container>
