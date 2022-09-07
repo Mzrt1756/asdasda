@@ -2,7 +2,7 @@ import { useState,useEffect } from 'react';
 import { Row, Col, Container, Spinner } from "react-bootstrap"
 import { getItem } from '../../catalogo.jsx';
 import { ItemList } from "../ItemList/ItemList"
-// import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import {useParams} from 'react-router-dom'
 import './ItemListContainer.css'
 
@@ -46,17 +46,14 @@ export const ItemListContainer = () => {
 
                 <Container>
                     <Row>
-                        {/* <Col className='colCategorias'><Link className='linksCategorias' to="/category/cafe">Café</Link></Col>   
+                        <Col className='colCategorias'><Link className='linksCategorias' to="/category/café">Café</Link></Col>   
                         <Col className='colCategorias'><Link className='linksCategorias' to="/category/cafeteras">Cafeteras</Link></Col> 
                         <Col className='colCategorias'><Link className='linksCategorias' to="/category/accesorios">Accesorios</Link></Col> 
                         <Col className='colCategorias'><Link className='linksCategorias' to="/category/cursos">Cursos</Link></Col>
-                        <Col className='colCategorias'><Link className='linksCategorias' to="/category/vertodos">Ver Todos</Link></Col>                                  */}
+                        <Col className='colCategorias'><Link className='linksCategorias' to="/">Ver Todos</Link></Col>
                         <ItemList item={item}/>
                     </Row>
                 </Container>
-                
-                
-                
             }
             
         </Container>

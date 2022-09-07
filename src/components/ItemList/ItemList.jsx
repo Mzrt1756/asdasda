@@ -13,7 +13,7 @@ export const ItemList = ({item}) => {
             <Row xs={1} sm={2} md={2} lg={3} xl={4} className="g-4">
                 {item.map(item => (
                     <Col> 
-                        <Link key={item.id} to={`/item/${item.id}`}>
+                        <Link className='links' key={item.id} to={`/item/${item.id}`}>
                             <Item item={item}/>
                         </Link>
                     </Col>
