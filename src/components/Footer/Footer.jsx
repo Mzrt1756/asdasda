@@ -26,7 +26,7 @@ export const Footer = () => {
                 <ListGroup.Item className='border-0 p-0'><a href='/quienessomos' className='px-2 text-muted text-decoration-none'>¿Quiénes Somos?</a></ListGroup.Item>
                 <ListGroup.Item className='border-0 p-0'><a href='/origenes' className='px-2 text-muted text-decoration-none'>Orígenes</a></ListGroup.Item>
                 <ListGroup.Item className='border-0 p-0'><a href='/contacto' className='px-2 text-muted text-decoration-none'>Contacto</a></ListGroup.Item>
-                <ListGroup.Item className='border-0 p-0'><a href='/carrito' className='px-2 text-muted text-decoration-none'>Carrito</a></ListGroup.Item>
+                <ListGroup.Item className='border-0 p-0'><a href='/cart' className='px-2 text-muted text-decoration-none'>Carrito</a></ListGroup.Item>
             </ListGroup>
         </Container>
     )

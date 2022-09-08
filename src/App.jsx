@@ -31,7 +31,7 @@ function App() {
           <Route exact path='/quienessomos' element={<QuienesSomos/>}></Route>
           <Route exact path='/origenes' element={<Origenes/>}></Route>
           <Route exact path='/contacto' element={<Contacto/>}></Route>
-          <Route exact path='/carrito' element={<Carrito/>}></Route>   
+          <Route exact path='/cart' element={<Carrito/>}></Route>   
           <Route path='*' element={<PaginaError/>}></Route>       
         </Routes>
         <Footer/>

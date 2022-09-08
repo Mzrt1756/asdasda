@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import { ItemCount } from '../ItemCount/ItemCount';
+import { Button } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
@@ -8,10 +9,16 @@ import './ItemDetail.css'
 
 export const ItemDetail = ({item}) => {
     const [numeroItems, setNumeroItems] = useState(0);
+    const [botonActivo,setBotonActivo] = useState(true);
 
-    const agregarProductoCarrito = (cantidadItem) =>{
-        console.log('Se agregó ' + cantidadItem + ' unidades del item ');
-        setNumeroItems(cantidadItem);
+    const agregarProductoCarrito = (contador) =>{
+        contador += numeroItems
+        console.log('Se agregó ' + contador + ' unidades del item ' + item.id);
+        setNumeroItems(contador);
+        if (contador>0){
+            setBotonActivo(false);
+        }
+        
     }
 
     console.log(numeroItems);
@@ -28,7 +35,8 @@ export const ItemDetail = ({item}) => {
                         <p><b>Peso: {item.peso}</b></p>
 
                         <p>{item.descripcion}</p>
-                        <Container className='itemCountDetail'><ItemCount stock={item.stock} initial={item.initial} onAdd={agregarProductoCarrito}/></Container>
+                        <Container id='itemCountDetail'><ItemCount id="itemCountButton" stock={item.stock} initial={item.initial} onAdd={agregarProductoCarrito}/></Container>
+                        <Container className='d-flex justify-content-center'><Button href="/cart" className="buttonTerminar mt-2 p-1" variant="outline-secondary" disabled={botonActivo}>Terminar Compra</Button></Container>
                     </Col>
             </Row>
         </Container>

@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './ItemCount.css'
 
 export const ItemCount = ({stock, initial, onAdd}) =>{
+
     const [contador, setContador] = useState(initial);
 
     const incrementarProducto = () =>{
