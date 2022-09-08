@@ -17,7 +17,7 @@ import { PaginaError } from './components/PaginaError/PaginaError';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div>
         <NavBar/>
         <CarouselHome/>
