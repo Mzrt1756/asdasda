@@ -9,7 +9,9 @@ import './ItemDetail.css'
 
 export const ItemDetail = ({item}) => {
     const [numeroItems, setNumeroItems] = useState(0);
+    // const [productoAgregado,setProductoAgregado] = useState([]);
     const [botonActivo,setBotonActivo] = useState(true);
+    const [botonAgregarActivo,setBotonAgregarActivo] = useState(false);
 
     const agregarProductoCarrito = (contador) =>{
         contador += numeroItems
@@ -17,8 +19,11 @@ export const ItemDetail = ({item}) => {
         setNumeroItems(contador);
         if (contador>0){
             setBotonActivo(false);
-        }
-        
+            setBotonAgregarActivo(true);
+            const itemCountDetail = document.getElementById("itemCountDetail");
+            itemCountDetail.remove();
+
+        }   
     }
 
     console.log(numeroItems);
@@ -35,7 +40,7 @@ export const ItemDetail = ({item}) => {
                         <p><b>Peso: {item.peso}</b></p>
 
                         <p>{item.descripcion}</p>
-                        <Container id='itemCountDetail'><ItemCount id="itemCountButton" stock={item.stock} initial={item.initial} onAdd={agregarProductoCarrito}/></Container>
+                        <Container id='itemCountDetail'><ItemCount id="itemCountButton" estadoBoton={botonAgregarActivo} stock={item.stock} initial={item.initial} onAdd={agregarProductoCarrito}/></Container>
                         <Container className='d-flex justify-content-center'><Button href="/cart" className="buttonTerminar mt-2 p-1" variant="outline-secondary" disabled={botonActivo}>Terminar Compra</Button></Container>
                     </Col>
             </Row>

@@ -6,7 +6,7 @@ import { Button } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './ItemCount.css'
 
-export const ItemCount = ({stock, initial, onAdd}) =>{
+export const ItemCount = ({estadoBoton, stock, initial, onAdd}) =>{
 
     const [contador, setContador] = useState(initial);
 
@@ -28,12 +28,12 @@ export const ItemCount = ({stock, initial, onAdd}) =>{
     return(
         <Container>
             <Row className="rowContador align-items-center">
-                <Button className="col colButton d-flex align-items-center justify-content-center" onClick={reducirProducto}>-</Button>
+                <Button className="col colButton d-flex align-items-center justify-content-center" variant="outline-secondary" onClick={reducirProducto} disabled={estadoBoton}>-</Button>
                 <Col className="colContador">{contador}</Col>
-                <Button className="col colButton d-flex align-items-center justify-content-center" onClick={incrementarProducto}>+</Button>
+                <Button className="col colButton d-flex align-items-center justify-content-center" variant="outline-secondary" onClick={incrementarProducto} disabled={estadoBoton}>+</Button>
             </Row>           
             <Row>
-            <Button className="agregarCarritoContador mt-2 p-1" onClick={()=>(onAdd(contador))} variant="outline-secondary">Agregar al Carrito</Button>
+                <Button className="agregarCarritoContador mt-2 p-1" onClick={()=>(onAdd(contador))} variant="outline-secondary" disabled={estadoBoton}>Agregar al Carrito</Button>
             </Row>
             
         </Container>
