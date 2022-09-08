@@ -1,3 +1,21 @@
+# E-commerce: Ristretto Coffee House
+
+Proyecto Final Curso React Coderhouse
+
+Se desarrolló un prototipo de tienda virtual simulando emprendimiento de venta de café, accesorios para su preparación o cursos de metodologías de preparación.
+
+# Componentes del sitio web
+
+- Header y navbar para mostrar la navegación. 
+- Catálogo de productos con botón para visualizar más detalles del producto.
+- Componente para ver detalles de un producto específico junto con un contador para seleccionar la cantidad y botón para dirigirse al carrito para finalizar compra. 
+- Uso de Function Based Components con hook de manejo de estado (useState) y hook de efectos (useEffect) para obtener la información necesaria.
+- Manejo de rutas con React Router Dom e implementación de filtros por categorías de productos utilizando los parámetros de la navegacion (useParams).
+
+# Navegación
+
+![image](./src/assets/gif_navegaci%C3%B3n.gif)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
