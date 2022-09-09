@@ -46,11 +46,11 @@ export const ItemListContainer = () => {
 
                 <Container>
                     <Row>/ristretto-porceldp
-                        <Col className='colCategorias'><Link className='linksCategorias' to="category/café">Café</Link></Col>   
-                        <Col className='colCategorias'><Link className='linksCategorias' to="category/cafeteras">Cafeteras</Link></Col> 
-                        <Col className='colCategorias'><Link className='linksCategorias' to="category/accesorios">Accesorios</Link></Col> 
-                        <Col className='colCategorias'><Link className='linksCategorias' to="category/cursos">Cursos</Link></Col>
-                        <Col className='colCategorias'><Link className='linksCategorias' to="">Ver Todos</Link></Col>
+                        <Col className='colCategorias'><Link className='linksCategorias' to="/category/café">Café</Link></Col>   
+                        <Col className='colCategorias'><Link className='linksCategorias' to="/category/cafeteras">Cafeteras</Link></Col> 
+                        <Col className='colCategorias'><Link className='linksCategorias' to="/category/accesorios">Accesorios</Link></Col> 
+                        <Col className='colCategorias'><Link className='linksCategorias' to="/category/cursos">Cursos</Link></Col>
+                        <Col className='colCategorias'><Link className='linksCategorias' to="/">Ver Todos</Link></Col>
                         <ItemList item={item}/>
                     </Row>
                 </Container>
