@@ -45,7 +45,7 @@ export const ItemListContainer = () => {
                 :
 
                 <Container>
-                    <Row>/ristretto-porceldp
+                    <Row>
                         <Col className='colCategorias'><Link className='linksCategorias' to="/category/café">Café</Link></Col>   
                         <Col className='colCategorias'><Link className='linksCategorias' to="/category/cafeteras">Cafeteras</Link></Col> 
                         <Col className='colCategorias'><Link className='linksCategorias' to="/category/accesorios">Accesorios</Link></Col> 
