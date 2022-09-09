@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ristretto-porceldp/static/css/main.6be65d3e.css",
-    "main.js": "/ristretto-porceldp/static/js/main.862026a8.js",
+    "main.js": "/ristretto-porceldp/static/js/main.b6504010.js",
     "static/js/787.2be6732c.chunk.js": "/ristretto-porceldp/static/js/787.2be6732c.chunk.js",
     "static/media/bodum_brasil.jpg": "/ristretto-porceldp/static/media/bodum_brasil.81226c22b462b27c2ccf.jpg",
     "static/media/bodum_java_3tz.jpg": "/ristretto-porceldp/static/media/bodum_java_3tz.16d6f7e953c6b8331d5a.jpg",
@@ -21,11 +21,11 @@
     "static/media/carouselImg1.jpg": "/ristretto-porceldp/static/media/carouselImg1.f423299c8256d1dd4fbf.jpg",
     "index.html": "/ristretto-porceldp/index.html",
     "main.6be65d3e.css.map": "/ristretto-porceldp/static/css/main.6be65d3e.css.map",
-    "main.862026a8.js.map": "/ristretto-porceldp/static/js/main.862026a8.js.map",
+    "main.b6504010.js.map": "/ristretto-porceldp/static/js/main.b6504010.js.map",
     "787.2be6732c.chunk.js.map": "/ristretto-porceldp/static/js/787.2be6732c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6be65d3e.css",
-    "static/js/main.862026a8.js"
+    "static/js/main.b6504010.js"
   ]
 }
