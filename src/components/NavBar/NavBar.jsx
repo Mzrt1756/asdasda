@@ -4,6 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Logo from '../../assets/Coffee-shop-logo.png'
 import {CartWidget} from '../CartWidget/CartWidget'
+import { LinkContainer } from 'react-router-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './NavBar.css'
 
@@ -11,7 +12,7 @@ export const NavBar = () => {
   return (
     <Navbar bg="light" expand="md" className='px-5 py-1'>
       <Container fluid className="">
-        <Navbar.Brand href="/">
+        <LinkContainer to="/"><Navbar.Brand>
             <img
               alt=""
               src= {Logo}
@@ -20,7 +21,7 @@ export const NavBar = () => {
               className="d-inline-block align-top navbarImg"
             />{' '}
             <p className='d-inline-block m-auto brandText'>Ristretto Coffee House</p> 
-        </Navbar.Brand>
+        </Navbar.Brand></LinkContainer>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll" >
           <Nav
@@ -28,14 +29,14 @@ export const NavBar = () => {
             style={{ maxHeight: '230px' }}
             navbarScroll
           >
-            <Nav.Link href="/">Inicio</Nav.Link>
-            <Nav.Link href="/">Tienda</Nav.Link>
-            <Nav.Link href="/mayorista">Mayorista</Nav.Link>
+            <LinkContainer to="/"><Nav.Link >Inicio</Nav.Link></LinkContainer>
+            <LinkContainer to="/"><Nav.Link >Tienda</Nav.Link></LinkContainer>
+            <LinkContainer to="/mayorista"><Nav.Link >Mayorista</Nav.Link></LinkContainer>
             <NavDropdown title="Nosotros" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="/quienessomos">¿Quiénes Somos?</NavDropdown.Item>
-              <NavDropdown.Item href="/origenes">Orígenes</NavDropdown.Item>
+              <LinkContainer to="/quienessomos"><NavDropdown.Item >¿Quiénes Somos?</NavDropdown.Item></LinkContainer>
+              <LinkContainer to="/origenes"><NavDropdown.Item >Orígenes</NavDropdown.Item></LinkContainer>
             </NavDropdown>
-            <Nav.Link href="/contacto">Contacto</Nav.Link>
+            <LinkContainer to="/contacto"><Nav.Link >Contacto</Nav.Link></LinkContainer>
             <CartWidget/>
           </Nav>
         </Navbar.Collapse>

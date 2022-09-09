@@ -2,7 +2,7 @@ import { useState,useEffect } from 'react';
 import { Row, Col, Container, Spinner } from "react-bootstrap"
 import { getItem } from '../../catalogo.jsx';
 import { ItemList } from "../ItemList/ItemList"
-import {Link} from 'react-router-dom'
+import { Link} from 'react-router-dom'
 import {useParams} from 'react-router-dom'
 import './ItemListContainer.css'
 
