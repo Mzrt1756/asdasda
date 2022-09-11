@@ -1,13 +1,22 @@
 import { useContext } from 'react'
 import { Button, Container, Row, Col } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import Swal from 'sweetalert2'
 import { CartContext } from '../../context/CartContext'
 import { CartItem } from '../CartItem/CartItem'
 import './CartContainer.css'
 
 export const CartContainer = () => {
     const {listaProductosCarrito, clear} = useContext(CartContext);
+    const terminarCompra = () =>{
+        clear();
+        Swal.fire({
+            title: 'Muchas gracias por su compra.',
+            icon: 'success',
+            confirmButtonText : 'Confirmar',  
+          })
 
+    }
     return (
         <div>
             {
@@ -24,7 +33,7 @@ export const CartContainer = () => {
                     <Container className='containerBotonesCarrito d-flex'>
                         <Button className='m-3' variant="secondary" onClick={clear}>Vaciar Carrito</Button>
                         <Link to="/"><Button className='m-3' variant="secondary">Volver a la Tienda</Button></Link>
-                        <Button className='m-3' variant="secondary">Terminar Compra</Button>
+                        <Link to="/"><Button className='m-3' variant="secondary" onClick={()=>{terminarCompra()}}>Terminar Compra</Button></Link>
                     </Container>
                 </> 
                 :
@@ -36,7 +45,6 @@ export const CartContainer = () => {
                         </Col>
                     </Row>
                 </Container>
-
             }
         </div>
     )

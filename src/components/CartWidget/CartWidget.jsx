@@ -10,8 +10,6 @@ export const CartWidget = () => {
     const {obtTodosItems} = useContext(CartContext);
     console.log(obtTodosItems())
 
-
-
     return(
         <IconContext.Provider value={{className: "react-icons" }}>
             <div>
@@ -22,7 +20,6 @@ export const CartWidget = () => {
                     <Link to="/cart"><FaShoppingCart/></Link>
                     <Link to="/cart"><Button variant="secondary" id="contCarrito">{obtTodosItems()}</Button></Link>
                 </>
-                
                 }
             </div>
         </IconContext.Provider>

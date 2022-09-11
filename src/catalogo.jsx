@@ -142,6 +142,7 @@ const catalogoDeProductos = [
     }
   ]
 
+
 export const getItem = new Promise((resolve, reject) => {
     setTimeout(() => {
         resolve(catalogoDeProductos)

@@ -20,7 +20,7 @@ export const ItemDetail = ({item}) => {
         console.log('Se agregó ' + contador + ' unidades del item ' + item.nombre);
         if (contador>0){
             addItem(item, contador)
-            setQuantity(contador);
+            setQuantity(contador)         
             setBotonActivo(false);
             setBotonAgregarActivo(true);
             const itemCountDetail = document.getElementById("itemCountDetail");
