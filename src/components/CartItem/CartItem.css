@@ -1,0 +1,9 @@
+.rowItemCarrito{
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.imgCarrito{
+    max-height: 100px;
+}

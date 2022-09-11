@@ -7,24 +7,31 @@ import { CartContext } from '../../context/CartContext';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-
+import Swal from 'sweetalert2'
 import './ItemDetail.css'
 
 export const ItemDetail = ({item}) => {
-    const {agregarProducto} = useContext(CartContext)
+    const {addItem} = useContext(CartContext)
+    const [quantity, setQuantity] = useState(0);
     const [botonActivo,setBotonActivo] = useState(true);
     const [botonAgregarActivo,setBotonAgregarActivo] = useState(false);
 
     const onAdd = (contador) =>{
-        const productoCarrito = {...item, cantidad:contador}
         console.log('Se agregó ' + contador + ' unidades del item ' + item.nombre);
         if (contador>0){
-            agregarProducto(productoCarrito)
+            addItem(item, contador)
+            setQuantity(contador);
             setBotonActivo(false);
             setBotonAgregarActivo(true);
             const itemCountDetail = document.getElementById("itemCountDetail");
             itemCountDetail.remove();
-        }   
+        } else {
+            Swal.fire({
+                title: 'Debe ingresar un número mayor a 0.',
+                icon: 'warning',
+                confirmButtonText : 'Confirmar',  
+              })
+        }
     }
 
     return (

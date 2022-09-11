@@ -1,0 +1,11 @@
+.textoCarritoVacio{
+    font-size: 20px;
+}
+
+.colCarritoVacio{
+    text-align: center;
+}
+
+.containerBotonesCarrito{
+    justify-content: center;
+}
