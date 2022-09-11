@@ -8,6 +8,8 @@ import './CartWidget.css';
 
 export const CartWidget = () => {
     const {obtTodosItems} = useContext(CartContext);
+    console.log(obtTodosItems())
+
 
 
     return(
@@ -15,7 +17,7 @@ export const CartWidget = () => {
             <div>
                 <Link to="/cart"><FaShoppingCart/></Link>
                 {
-                obtTodosItems>0 &&
+                obtTodosItems()>0 &&
                 <Link to="/cart"><Button variant="secondary" id="contCarrito">{obtTodosItems()}</Button></Link>
                 }
             </div>
