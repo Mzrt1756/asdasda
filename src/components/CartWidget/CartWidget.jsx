@@ -15,10 +15,14 @@ export const CartWidget = () => {
     return(
         <IconContext.Provider value={{className: "react-icons" }}>
             <div>
-                <Link to="/cart"><FaShoppingCart/></Link>
+                
                 {
                 obtTodosItems()>0 &&
-                <Link to="/cart"><Button variant="secondary" id="contCarrito">{obtTodosItems()}</Button></Link>
+                <>
+                    <Link to="/cart"><FaShoppingCart/></Link>
+                    <Link to="/cart"><Button variant="secondary" id="contCarrito">{obtTodosItems()}</Button></Link>
+                </>
+                
                 }
             </div>
         </IconContext.Provider>
