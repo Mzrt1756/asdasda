@@ -1,6 +1,9 @@
 import {useState} from 'react';
 import { ItemCount } from '../ItemCount/ItemCount';
 import { Button } from 'react-bootstrap';
+import { Link } from "react-router-dom";
+import { useContext } from 'react';
+import { CartContext } from '../../context/CartContext';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
@@ -8,25 +11,21 @@ import Row from 'react-bootstrap/Row';
 import './ItemDetail.css'
 
 export const ItemDetail = ({item}) => {
-    const [numeroItems, setNumeroItems] = useState(0);
-    // const [productoAgregado,setProductoAgregado] = useState([]);
+    const {agregarProducto} = useContext(CartContext)
     const [botonActivo,setBotonActivo] = useState(true);
     const [botonAgregarActivo,setBotonAgregarActivo] = useState(false);
 
-    const agregarProductoCarrito = (contador) =>{
-        contador += numeroItems
-        console.log('Se agregó ' + contador + ' unidades del item ' + item.id);
-        setNumeroItems(contador);
+    const onAdd = (contador) =>{
+        const productoCarrito = {...item, cantidad:contador}
+        console.log('Se agregó ' + contador + ' unidades del item ' + item.nombre);
         if (contador>0){
+            agregarProducto(productoCarrito)
             setBotonActivo(false);
             setBotonAgregarActivo(true);
             const itemCountDetail = document.getElementById("itemCountDetail");
             itemCountDetail.remove();
-
         }   
     }
-
-    console.log(numeroItems);
 
     return (
         <Container>
@@ -40,8 +39,8 @@ export const ItemDetail = ({item}) => {
                         <p><b>Peso: {item.peso}</b></p>
 
                         <p>{item.descripcion}</p>
-                        <Container id='itemCountDetail'><ItemCount id="itemCountButton" estadoBoton={botonAgregarActivo} stock={item.stock} initial={item.initial} onAdd={agregarProductoCarrito}/></Container>
-                        <Container className='d-flex justify-content-center'><Button href="/cart" className="buttonTerminar mt-2 p-1" variant="outline-secondary" disabled={botonActivo}>Terminar Compra</Button></Container>
+                        <Container id='itemCountDetail'><ItemCount id="itemCountButton" estadoBoton={botonAgregarActivo} stock={item.stock} initial={item.initial} onAdd={onAdd}/></Container>
+                        <Container className='d-flex justify-content-center'> <Link to="/cart"><Button className="buttonTerminar mt-2 p-1" variant="outline-secondary" disabled={botonActivo}>Terminar Compra</Button></Link></Container>
                     </Col>
             </Row>
         </Container>
