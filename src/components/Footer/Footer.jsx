@@ -11,15 +11,15 @@ export const Footer = () => {
     return (
         <Container  className='d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top'>
             <p className='mb-0 text-muted'>© 2022 RistrettoCo S.A.</p>
-            <LinkContainer to="/"><Navbar.Brand >
+            <LinkContainer to="/"><Navbar.Brand className='d-flex' >
                 <img
                 alt=""
                 src= {Logo}
-                width="30"
-                height="30"
-                className="d-inline-block align-top"
+                width="40"
+                height="40"
+                className="d-flex"
                 />{' '}
-                <p className='d-inline-block m-auto brandText'>Ristretto Coffee House</p> 
+                <p className='d-flex brandText'>Ristretto Coffee House</p> 
             </Navbar.Brand></LinkContainer>
             <ListGroup className='justify-content-end border-0'>
                 <ListGroup.Item className='border-0 p-0'><Link to='/' className='px-2 text-muted text-decoration-none'>Inicio</Link></ListGroup.Item>

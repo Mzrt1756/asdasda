@@ -1,3 +1,13 @@
 .cardBody{
     text-align: center !important;
 }
+
+.imgCard{
+    transition: transform .5s;
+}
+
+	
+.imgCard:hover{
+    transform: scale(1.05); 
+}
+ 

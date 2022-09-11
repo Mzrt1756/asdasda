@@ -47,7 +47,8 @@ export const ItemDetail = ({item}) => {
 
                         <p>{item.descripcion}</p>
                         <Container id='itemCountDetail'><ItemCount id="itemCountButton" estadoBoton={botonAgregarActivo} stock={item.stock} initial={item.initial} onAdd={onAdd}/></Container>
-                        <Container className='d-flex justify-content-center'> <Link to="/cart"><Button className="buttonTerminar mt-2 p-1" variant="outline-secondary" disabled={botonActivo}>Terminar Compra</Button></Link></Container>
+                        <Container className='d-flex justify-content-center'> <Link to="/"><Button className="mt-2 p-1" variant="outline-secondary">Seguir Comprando</Button></Link></Container>
+                        <Container className='d-flex justify-content-center'> <Link to="/cart"><Button className="buttonTerminar mt-2 p-1" variant="outline-secondary" disabled={botonActivo}>Terminar Compra</Button></Link></Container>                  
                     </Col>
             </Row>
         </Container>
