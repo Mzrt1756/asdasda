@@ -24,6 +24,7 @@ export const CartContainer = () => {
                     <Container className='containerBotonesCarrito d-flex'>
                         <Button className='m-3' variant="secondary" onClick={clear}>Vaciar Carrito</Button>
                         <Link to="/"><Button className='m-3' variant="secondary">Volver a la Tienda</Button></Link>
+                        <Button className='m-3' variant="secondary">Terminar Compra</Button>
                     </Container>
                 </> 
                 :

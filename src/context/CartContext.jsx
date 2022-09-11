@@ -6,18 +6,16 @@ export const CartProvider = ({children}) =>{
     const [listaProductosCarrito, setListaProductosCarrito] = useState([]);
 
     const isInCart = (id) =>{
-        const idIndex = listaProductosCarrito.findIndex(producto => producto.id === id);
-        if (idIndex>=0){
-            return {existe: true, index:idIndex}
-        } else{
-            return {existe:false, index:undefined}
-        }
+        const itemExiste = listaProductosCarrito.some((producto) =>producto.id===id);
+        return itemExiste;
     }
 
     const addItem = (item, quantity) =>{
         const listaNueva = [...listaProductosCarrito];
         if(isInCart(item.id)){
-            const itemIndex = listaProductosCarrito.findIndex(producto=>producto.id===item.id);
+            console.log(isInCart())
+            const itemIndex = (listaProductosCarrito.findIndex(producto=>producto.id===item.id)+1);
+            console.log(itemIndex)
             listaNueva[itemIndex].qty = listaNueva[itemIndex].qty + quantity;
             listaNueva[itemIndex].precioTotal = listaNueva[itemIndex].qty * listaNueva[itemIndex].precio;
             setListaProductosCarrito(listaNueva)
@@ -40,7 +38,7 @@ export const CartProvider = ({children}) =>{
     }
   
     const obtTodosItems = ()=>{
-        const totalItems = listaProductosCarrito.reduce((acc,item)=>acc + item.quantity,0);
+        const totalItems = listaProductosCarrito.reduce((acc,item)=>acc + item.qty,0);
         return totalItems;
     }
 
