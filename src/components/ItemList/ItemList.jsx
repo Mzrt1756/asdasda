@@ -10,9 +10,9 @@ export const ItemList = ({item}) => {
   return (
     <Container>
         {            
-            <Row xs={1} sm={2} md={2} lg={3} xl={4} className="g-4">
+            <Row xs={1} sm={2} md={2} lg={3} xl={4} className="g-4 m-auto">
                 {item.map(item => (
-                    <Col key={"Unique"+item.id}> 
+                    <Col key={"Unique"+item.id} className="m-0"> 
                         <Link className='links' to={`/item/${item.id}`}>
                             <Item item={item}/>
                         </Link>

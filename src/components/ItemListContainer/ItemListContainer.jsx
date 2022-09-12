@@ -13,16 +13,14 @@ export const ItemListContainer = () => {
     const [loading,setLoading] = useState(true)
 
     useEffect(()=>{
-        getItem
-            .then(resultado=>{
-            if(categoriaProd !== "café" && categoriaProd !== "cafeteras" && categoriaProd !== "accesorios" && categoriaProd !== "cursos"){
-                setItem(resultado)
-                setLoading(false)
+        getItem.then(resultado=>{
+            if(!categoriaProd){
+                setItem(resultado);
+                setLoading(false);
             } else{
                 const nuevaLista = resultado.filter(item=>item.categoria === categoriaProd);
-                console.log('nuevaLista',nuevaLista)
-                setItem(nuevaLista)
-                setLoading(false)
+                setItem(nuevaLista);
+                setLoading(false);
             }
         })
     },[categoriaProd])
