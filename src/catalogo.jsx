@@ -41,7 +41,7 @@ const catalogoDeProductos = [
        precio : 2990,
        peso: "250g",
        img : [cafeHoney],
-       descripcion: "El beneficio Honey o semi-lavado es el puente entre un café húmedo y uno natural. La cereza se despulpa y luego se seca con la capa del mucílago que se mantiene en el grano. Por eso también se lo conoce como Honey por la sensación pegajosa del grano antes de secarse, similar a la miel. En taza se logra un café de gran dulzor y acidez balanceada con notas afrutadas. ",
+       descripcion: "El beneficio Honey o semi-lavado es el puente entre un café húmedo y uno natural. La cereza se despulpa y luego se seca con la capa del mucílago que se mantiene en el grano. Por eso también se lo conoce como Honey por la sensación pegajosa del grano antes de secarse, similar a la miel. En taza se logra un café de gran dulzor y acidez balanceada con notas afrutadas.",
        categoria: "café",
        stock: 30,
        initial: 0,
@@ -84,7 +84,7 @@ const catalogoDeProductos = [
       nombre : "BODUM CHAMB POLY",
       precio : 10980,
       img : [bodumJava],
-      descripcion: "La cafetera JAVA no solo tiene un diseño clásico, sino que también infunde el mejor aroma de su café y casi no deja residuos en su taza. Simplemente agregue café molido y agua caliente, espere 4 minutos y luego empuje lentamente el émbolo hacia abajo, listo. Características y beneficios del producto: • Nuestro icónico sistema de elaboración de café saca a relucir de forma rápida y eficaz todo el sabor de los granos gruesos molidos, produciendo un delicioso café cada vez • El vidrio de borosilicato resistente al calor y que no produce manchas, no altera ni afecta el sabor natural del café, está enmarcado en plástico. • La jarra transparente hace que todo el proceso de elaboración sea visible • El émbolo de acero inoxidable evita que se escapen posos de café cuando se vierte• Más respetuoso con el medio ambiente que los sistemas tradicionales de producción de café: sin filtros de papel ni cápsulas de plástico • Fácil de usar y fácil de limpiar.*/",
+      descripcion: "La cafetera JAVA no solo tiene un diseño clásico, sino que también infunde el mejor aroma de su café y casi no deja residuos en su taza. Simplemente agregue café molido y agua caliente, espere 4 minutos y luego empuje lentamente el émbolo hacia abajo, listo. Características y beneficios del producto: • Nuestro icónico sistema de elaboración de café saca a relucir de forma rápida y eficaz todo el sabor de los granos gruesos molidos, produciendo un delicioso café cada vez • El vidrio de borosilicato resistente al calor y que no produce manchas, no altera ni afecta el sabor natural del café, está enmarcado en plástico. • La jarra transparente hace que todo el proceso de elaboración sea visible • El émbolo de acero inoxidable evita que se escapen posos de café cuando se vierte• Más respetuoso con el medio ambiente que los sistemas tradicionales de producción de café: sin filtros de papel ni cápsulas de plástico • Fácil de usar y fácil de limpiar.",
       categoria: "cafeteras",
       stock: 8,
       initial: 0,
@@ -143,16 +143,16 @@ const catalogoDeProductos = [
   ]
 
 
-export const getItem = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        resolve(catalogoDeProductos)
-        reject(err => console.log(err))
-    }, 2000)
-})
+// export const getItem = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve(catalogoDeProductos)
+//         reject(err => console.log(err))
+//     }, 2000)
+// })
 
-export const getItemId = (id) =>{
-   return new Promise((resolve, reject) => {
-      const prod = catalogoDeProductos.find(item=>item.id === parseInt(id))
-      resolve(prod)
-   })
-} 
+// export const getItemId = (id) =>{
+//    return new Promise((resolve, reject) => {
+//       const prod = catalogoDeProductos.find(item=>item.id === parseInt(id))
+//       resolve(prod)
+//    })
+// } 
