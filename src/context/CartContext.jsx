@@ -42,8 +42,13 @@ export const CartProvider = ({children}) =>{
         return totalItems;
     }
 
+    const obtPrecioTotal = ()=>{
+        const precioTotalProductos = listaProductosCarrito.reduce((acc,item)=>acc + item.precioTotal,0);
+        return precioTotalProductos;
+    }
+
     return(
-        <CartContext.Provider value={{listaProductosCarrito, setListaProductosCarrito, addItem, removeItem, clear, isInCart, obtTodosItems}}>
+        <CartContext.Provider value={{listaProductosCarrito, setListaProductosCarrito, addItem, removeItem, clear, isInCart, obtTodosItems, obtPrecioTotal}}>
             {children}
         </CartContext.Provider>
     )
