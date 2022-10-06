@@ -8,7 +8,7 @@ import {ItemDetailContainer} from './components/ItemDetailContainer/ItemDetailCo
 import {CarouselHome} from './components/CarouselHome/CarouselHome'
 import {Footer} from './components/Footer/Footer';
 import { Contacto } from './components/Contacto/Contacto';
-import { Carrito } from './components/Carrito/Carrito';
+import { CartContainer } from './components/CartContainer/CartContainer';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import { Tienda } from './components/Tienda/Tienda';
 import { Mayorista } from './components/Mayorista/Mayorista';
@@ -33,7 +33,7 @@ function App() {
             <Route exact path='/quienessomos' element={<QuienesSomos/>}></Route>
             <Route exact path='/origenes' element={<Origenes/>}></Route>
             <Route exact path='/contacto' element={<Contacto/>}></Route>
-            <Route exact path='/cart' element={<Carrito/>}></Route>     
+            <Route exact path='/cart' element={<CartContainer/>}></Route>     
             <Route path='*' element={<PaginaError/>}></Route>       
           </Routes>
           <Footer/>

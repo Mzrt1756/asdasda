@@ -26,15 +26,15 @@ export const NavBar = () => {
         <Navbar.Collapse id="navbarScroll" >
           <Nav
             className="ms-auto my-2"
-            style={{ maxHeight: '230px' }}
+            style={{ maxHeight: '290px' }}
             navbarScroll
           >
             <LinkContainer to="/"><Nav.Link >Inicio</Nav.Link></LinkContainer>
             <LinkContainer to="/"><Nav.Link >Tienda</Nav.Link></LinkContainer>
             <LinkContainer to="/mayorista"><Nav.Link >Mayorista</Nav.Link></LinkContainer>
             <NavDropdown title="Nosotros" id="navbarScrollingDropdown">
-              <LinkContainer to="/quienessomos"><NavDropdown.Item >¿Quiénes Somos?</NavDropdown.Item></LinkContainer>
-              <LinkContainer to="/origenes"><NavDropdown.Item >Orígenes</NavDropdown.Item></LinkContainer>
+              <LinkContainer to="/quienessomos"><NavDropdown.Item className='navBarDropdown'>¿Quiénes Somos?</NavDropdown.Item></LinkContainer>
+              <LinkContainer to="/origenes"><NavDropdown.Item className='navBarDropdown'>Orígenes</NavDropdown.Item></LinkContainer>
             </NavDropdown>
             <LinkContainer to="/contacto"><Nav.Link >Contacto</Nav.Link></LinkContainer>
             <CartWidget/>

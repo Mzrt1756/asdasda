@@ -3,3 +3,6 @@
         display: none !important;
     }
 }
+.dropdown-item.active, .dropdown-item:active,.navBarDropdown.active,.navBarDropdown:active{
+    background-color: #6c757d !important;
+}

@@ -1,7 +1,6 @@
 import { useContext, useState } from 'react'
 import { CartContext } from '../../context/CartContext'
 import { Button, Container, Form } from "react-bootstrap"
-import { Link } from "react-router-dom";
 import { addDoc, collection, getFirestore, Timestamp } from "firebase/firestore"
 import { baseDeDatos } from '../../utils/firebase';
 import Swal from 'sweetalert2'
