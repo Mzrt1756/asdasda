@@ -1,0 +1,21 @@
+.imgLogoMay{
+    width: 160px;
+}
+
+.textMayorista{
+    line-height: 35px;
+}
+
+@media screen and (max-width:991px)  {
+    .tituloMayorista{
+        text-align: center;
+    }
+    .colMayorista1{
+        order: 2;
+    }
+
+    .colMayorista2{
+        order: 1;
+    }
+}
+

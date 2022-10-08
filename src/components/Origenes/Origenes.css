@@ -1,0 +1,24 @@
+.imgOrigenes{
+    align-self: center;
+    width: 100%;
+}
+
+.textOrigenes{
+    align-self: center;
+    line-height: 35px;
+}
+
+@media screen and (max-width:991px)  {
+    .tituloOrigenes{
+        text-align: center;
+    }
+
+    .colOrigenes1{
+        order: 2;
+    }
+
+    .colOrigenes2{
+        order: 1;
+    }
+}
+
