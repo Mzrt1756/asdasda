@@ -1,7 +1,7 @@
 import { Container, Row, Col, Image } from "react-bootstrap"
 import Img1 from '../../assets/origenes1.jpg'
 import Img2 from '../../assets/origenes2.jpg'
-import Img3 from '../../assets/origenes3.jpg'
+import Img3 from '../../assets/origenes3.png'
 import Img4 from '../../assets/origenes4.jpeg'
 import "./Origenes.css"
 
