@@ -1,19 +1,25 @@
 {
   "files": {
-    "main.css": "/ristretto-porceldp/static/css/main.8cca2d86.css",
-    "main.js": "/ristretto-porceldp/static/js/main.3e31adfd.js",
+    "main.css": "/ristretto-porceldp/static/css/main.03e413b7.css",
+    "main.js": "/ristretto-porceldp/static/js/main.d5fbf17b.js",
     "static/js/787.2be6732c.chunk.js": "/ristretto-porceldp/static/js/787.2be6732c.chunk.js",
     "static/media/carouselImg2.jpg": "/ristretto-porceldp/static/media/carouselImg2.c1a6b676cc81aecf6dd1.jpg",
+    "static/media/origenes4.jpeg": "/ristretto-porceldp/static/media/origenes4.13ec41607bc499eaf8e9.jpeg",
+    "static/media/cafe-tostado(1).png": "/ristretto-porceldp/static/media/cafe-tostado(1).f28bb5ada25445f7ed3c.png",
     "static/media/Coffee-shop-logo.png": "/ristretto-porceldp/static/media/Coffee-shop-logo.8b25d9c0e320c941d920.png",
+    "static/media/origenes2.jpg": "/ristretto-porceldp/static/media/origenes2.33d36901bdc595879d9e.jpg",
     "static/media/carouselImg3.jpg": "/ristretto-porceldp/static/media/carouselImg3.ab18a8f08d48549734aa.jpg",
+    "static/media/origenes3.jpg": "/ristretto-porceldp/static/media/origenes3.68125cca3a00dcfbeca2.jpg",
     "static/media/carouselImg1.jpg": "/ristretto-porceldp/static/media/carouselImg1.f423299c8256d1dd4fbf.jpg",
+    "static/media/origenes1.jpg": "/ristretto-porceldp/static/media/origenes1.989d5436ac1b8151edea.jpg",
+    "static/media/cafe-latteart(1).jpeg": "/ristretto-porceldp/static/media/cafe-latteart(1).555bbe5fd5b855c235ae.jpeg",
     "index.html": "/ristretto-porceldp/index.html",
-    "main.8cca2d86.css.map": "/ristretto-porceldp/static/css/main.8cca2d86.css.map",
-    "main.3e31adfd.js.map": "/ristretto-porceldp/static/js/main.3e31adfd.js.map",
+    "main.03e413b7.css.map": "/ristretto-porceldp/static/css/main.03e413b7.css.map",
+    "main.d5fbf17b.js.map": "/ristretto-porceldp/static/js/main.d5fbf17b.js.map",
     "787.2be6732c.chunk.js.map": "/ristretto-porceldp/static/js/787.2be6732c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8cca2d86.css",
-    "static/js/main.3e31adfd.js"
+    "static/css/main.03e413b7.css",
+    "static/js/main.d5fbf17b.js"
   ]
 }
