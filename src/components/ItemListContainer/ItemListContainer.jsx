@@ -3,8 +3,7 @@ import { Row, Col, Container} from "react-bootstrap"
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { baseDeDatos } from '../../utils/firebase';
 import { ItemList } from "../ItemList/ItemList"
-import { Link } from 'react-router-dom'
-import {useParams} from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import './ItemListContainer.css'
 
 export const ItemListContainer = () => {

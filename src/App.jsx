@@ -2,15 +2,14 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import { CartProvider } from './context/CartContext';
-import {NavBar} from './components/NavBar/NavBar';
-import {ItemListContainer} from './components/ItemListContainer/ItemListContainer'
-import {ItemDetailContainer} from './components/ItemDetailContainer/ItemDetailContainer'
-import {CarouselHome} from './components/CarouselHome/CarouselHome'
-import {Footer} from './components/Footer/Footer';
-import { Contacto } from './components/Contacto/Contacto';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { NavBar } from './components/NavBar/NavBar';
+import { ItemListContainer } from './components/ItemListContainer/ItemListContainer'
+import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer'
+import { CarouselHome } from './components/CarouselHome/CarouselHome'
 import { CartContainer } from './components/CartContainer/CartContainer';
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import { Tienda } from './components/Tienda/Tienda';
+import { Footer } from './components/Footer/Footer';
+import { Contacto } from './components/Contacto/Contacto';
 import { Mayorista } from './components/Mayorista/Mayorista';
 import { QuienesSomos } from './components/QuienesSomos/QuienesSomos';
 import { Origenes } from './components/Origenes/Origenes';
@@ -28,7 +27,6 @@ function App() {
             <Route exact path='/category' element={<ItemListContainer/>}></Route>
             <Route exact path='/category/:categoriaProd' element={<ItemListContainer/>}></Route>
             <Route exact path='/item/:idItem' element={<ItemDetailContainer/>}></Route>
-            <Route exact path='/tienda' element={<Tienda/>}></Route>
             <Route exact path='/mayorista' element={<Mayorista/>}></Route>
             <Route exact path='/quienessomos' element={<QuienesSomos/>}></Route>
             <Route exact path='/origenes' element={<Origenes/>}></Route>

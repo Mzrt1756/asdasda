@@ -1,7 +1,11 @@
+import { Container, Image } from "react-bootstrap"
+import ImgError from '../../assets/error.png'
+import "./PaginaError.css"
+
 export const PaginaError = () => {
     return(
-        <div>
-            ESTA PAGINA NO EXISTE
-        </div>
+        <Container fluid className="px-5 pt-5 pb-3">
+            <Image className="imagenError" src={ImgError} alt="imagenPaginaError"/>
+        </Container>
     )
 }

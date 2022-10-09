@@ -48,7 +48,7 @@ export const FormCompra = () => {
       const mailForm = inputs[1].value.length > 0 && inputs[1].validity.typeMismatch === false;
       const numeroForm = inputs[2].value.length > 0 && inputs[2].validity.typeMismatch === false;
       const domicilioForm = inputs[2].value.length > 0 && inputs[2].validity.typeMismatch === false;
-      if (nombreForm, mailForm, numeroForm, domicilioForm === true){
+      if (nombreForm && mailForm && numeroForm && domicilioForm === true){
         setConditionForm(false)
       } else {
         setConditionForm(true)
@@ -64,7 +64,7 @@ export const FormCompra = () => {
         <Form onSubmit={ordenDeCompra} onChange={formCompletado}>
           <Form.Group className="mb-3">
             <Form.Label>Nombre y Apellido</Form.Label>
-            <Form.Control type="text" name="nombre" placeholder="Ingrese su Nombre y Apellido" required/>
+            <Form.Control type="text" name="nombre" placeholder="Ingrese su Nombre y Apellido"/>
           </Form.Group>
           <Form.Group className="mb-3">
             <Form.Label>E-mail</Form.Label>

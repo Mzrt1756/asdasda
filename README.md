@@ -17,5 +17,5 @@ Se desarrolló un prototipo de tienda virtual simulando emprendimiento de venta 
 
 # Navegación
 
-![image](./src/assets/gifNavegación.gif)
+![image](./src/assets/gifNavegacion.gif)
 

@@ -6,3 +6,47 @@
 .links:hover{
     color: #6c757d;
 }
+
+.sinStock {
+    position: relative;
+    overflow: hidden;
+}
+
+.itemSinStock{
+    opacity: 0.6;
+
+}
+
+.overlay{
+    position: absolute;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(202, 202, 202, 0.3);
+    overflow: hidden;
+    width: 100%;
+    border-radius: 10px;
+}   
+
+.sinStock .overlay {
+    height: 95%;
+    width: 90%;
+    margin: auto;
+    margin: 15px;
+}
+
+.textSinStock{
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #212529;
+    background-color: rgba(33, 37, 41, 0.3);
+    border-radius: 10px;
+    position: absolute;
+    padding: 10px;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}   

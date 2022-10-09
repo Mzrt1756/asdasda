@@ -1,12 +1,8 @@
-import {useState} from 'react';
+import { useState, useContext } from 'react';
 import { ItemCount } from '../ItemCount/ItemCount';
-import { Button } from 'react-bootstrap';
+import { Button, Container, Row, Col } from 'react-bootstrap';
 import { Link } from "react-router-dom";
-import { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
-import Container from 'react-bootstrap/Container';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
 import Swal from 'sweetalert2'
 import './ItemDetail.css'
 

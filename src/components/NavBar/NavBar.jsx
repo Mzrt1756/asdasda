@@ -1,10 +1,7 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import Logo from '../../assets/Coffee-shop-logo.png'
-import {CartWidget} from '../CartWidget/CartWidget'
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { CartWidget } from '../CartWidget/CartWidget'
 import { LinkContainer } from 'react-router-bootstrap'
+import Logo from '../../assets/Coffee-shop-logo.png'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './NavBar.css'
 
@@ -29,7 +26,6 @@ export const NavBar = () => {
             style={{ maxHeight: '290px' }}
             navbarScroll
           >
-            <LinkContainer to="/"><Nav.Link >Inicio</Nav.Link></LinkContainer>
             <LinkContainer to="/"><Nav.Link >Tienda</Nav.Link></LinkContainer>
             <LinkContainer to="/mayorista"><Nav.Link >Mayorista</Nav.Link></LinkContainer>
             <NavDropdown title="Nosotros" id="navbarScrollingDropdown">

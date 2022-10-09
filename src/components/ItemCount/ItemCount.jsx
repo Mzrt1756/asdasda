@@ -1,8 +1,5 @@
 import { useState } from "react";
-import {Container} from "react-bootstrap";
-import { Row } from "react-bootstrap";
-import { Col } from "react-bootstrap";
-import { Button } from "react-bootstrap";
+import {Container, Row, Col, Button } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './ItemCount.css'
 

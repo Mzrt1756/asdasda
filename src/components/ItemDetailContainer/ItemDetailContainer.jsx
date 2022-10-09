@@ -4,6 +4,7 @@ import { baseDeDatos } from '../../utils/firebase';
 import { ItemDetail } from "../ItemDetail/ItemDetail"
 import { Container } from "react-bootstrap"
 import {useParams} from 'react-router-dom';
+import './ItemDetailContainer.css'
 
 
 export const ItemDetailContainer = () => {
