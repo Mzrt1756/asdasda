@@ -41,21 +41,19 @@ export const FormCompra = () => {
         clear();
     }
 
-    const setName = (e) =>{return e.target.textLength > 0};
-    const setMail = (e) =>{return e.target.textLength > 0};
-    const setNumero = (e) =>{return e.target.textLength > 0};
-    const setDomicilio = (e) =>{return e.target.textLength > 0};
-    
-
     const formCompletado = (e) =>{
       e.preventDefault();
-      if (setName === true && setMail(e) === true && setNumero(e) === true && setDomicilio(e) === true){
-        setConditionForm(false);
-        console.log(conditionForm);
+      const inputs = document.querySelectorAll("input")
+      const nombreForm = inputs[0].value.length > 0 && inputs[0].validity.typeMismatch === false;
+      const mailForm = inputs[1].value.length > 0 && inputs[1].validity.typeMismatch === false;
+      const numeroForm = inputs[2].value.length > 0 && inputs[2].validity.typeMismatch === false;
+      const domicilioForm = inputs[2].value.length > 0 && inputs[2].validity.typeMismatch === false;
+      if (nombreForm, mailForm, numeroForm, domicilioForm === true){
+        setConditionForm(false)
       } else {
-        setConditionForm(true);
-        console.log(conditionForm);
+        setConditionForm(true)
       }
+      console.log(conditionForm)
     }
 
     return (
@@ -66,19 +64,19 @@ export const FormCompra = () => {
         <Form onSubmit={ordenDeCompra} onChange={formCompletado}>
           <Form.Group className="mb-3">
             <Form.Label>Nombre y Apellido</Form.Label>
-            <Form.Control type="text" name="nombre" placeholder="Ingrese su Nombre y Apellido" onChange={setName}/>
+            <Form.Control type="text" name="nombre" placeholder="Ingrese su Nombre y Apellido" required/>
           </Form.Group>
           <Form.Group className="mb-3">
             <Form.Label>E-mail</Form.Label>
-            <Form.Control type="email" name="mail" placeholder="Ingrese su E-mail" onChange={setMail}/>
+            <Form.Control type="email" name="mail" placeholder="Ingrese su E-mail" />
           </Form.Group>
           <Form.Group className="mb-3">
             <Form.Label>Número de Teléfono</Form.Label>
-            <Form.Control type="tel" name="telefono" placeholder="Ingrese su Número de Teléfono" onChange={setNumero}/>
+            <Form.Control type="number" name="telefono" placeholder="Ingrese su Número de Teléfono" />
           </Form.Group>
           <Form.Group className="mb-3">
             <Form.Label>Domicilio</Form.Label>
-            <Form.Control type="text" name="domicilio" placeholder="Ingrese su Domicilio" onChange={setDomicilio}/>
+            <Form.Control type="text" name="domicilio" placeholder="Ingrese su Domicilio" />
           </Form.Group>
           <Form.Group className="mb-3">
             <Container className='d-flex justify-content-center'>
