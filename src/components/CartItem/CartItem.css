@@ -1,13 +1,21 @@
-.rowItemCarrito{
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-}
-
 .imgCarrito{
-    max-height: 200px;
+    width: 100%;
+    max-width: 120px;
 }
 
 .stockText{
     font-size: 10px;
+}
+
+.colCartItem{
+    display: flex;
+    align-items: center;
+}
+
+.textoStock{
+    font-size: 12px;
+}
+
+.textoNombre{
+    font-size: 15px;
 }

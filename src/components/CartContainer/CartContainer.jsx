@@ -13,6 +13,19 @@ export const CartContainer = () => {
             {
                 listaProductosCarrito.length>0 ?
                 <>
+                    <Container >
+                        <h2 className='pt-3 text-center'>Carrito</h2>
+                        <hr className='m-1' />
+                        <Row className='justify-content-between'>
+                            <Col className='col-3 p-0 text-center'></Col>
+                            <Col className='col-2 p-0 text-center'><h6>Item</h6></Col>
+                            <Col className='col-2 p-0 text-center'><h6>Precio</h6></Col>
+                            <Col className='col-2 p-0 text-center'><h6>Cant.</h6></Col>
+                            <Col className='col-1 p-0 text-center'></Col>
+                            <Col className='col-2 p-0 text-center'><h6>Total</h6></Col>
+                        </Row> 
+                        <hr className='m-0' />
+                    </Container>
                     {
                         listaProductosCarrito.map(item =>(
                             <Container key={"Pro"+Math.random()}>
@@ -20,11 +33,11 @@ export const CartContainer = () => {
                             </Container>
                         ))
                     }
-                    <hr />
+                    <Container><hr /></Container> 
                         <Container className='d-flex justify-content-center'>
-                            <h2>Precio Total: ${obtPrecioTotal()}</h2>
+                            <h4>Precio Total: ${obtPrecioTotal()}</h4>
                         </Container>
-                    <hr />
+                    <hr /> 
                     <Container>
                             <Container>
                                 <FormCompra/>
