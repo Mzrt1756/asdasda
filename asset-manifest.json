@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ristretto-porceldp/static/css/main.5718c78c.css",
-    "main.js": "/ristretto-porceldp/static/js/main.885424e1.js",
+    "main.js": "/ristretto-porceldp/static/js/main.6e75bffd.js",
     "static/js/787.2be6732c.chunk.js": "/ristretto-porceldp/static/js/787.2be6732c.chunk.js",
     "static/media/origenes3.png": "/ristretto-porceldp/static/media/origenes3.6ca19140e4d9f223fda3.png",
     "static/media/error.png": "/ristretto-porceldp/static/media/error.ac5f7b4fd545fba2e9ad.png",
@@ -16,11 +16,11 @@
     "static/media/cafe-latteart(1).jpeg": "/ristretto-porceldp/static/media/cafe-latteart(1).555bbe5fd5b855c235ae.jpeg",
     "index.html": "/ristretto-porceldp/index.html",
     "main.5718c78c.css.map": "/ristretto-porceldp/static/css/main.5718c78c.css.map",
-    "main.885424e1.js.map": "/ristretto-porceldp/static/js/main.885424e1.js.map",
+    "main.6e75bffd.js.map": "/ristretto-porceldp/static/js/main.6e75bffd.js.map",
     "787.2be6732c.chunk.js.map": "/ristretto-porceldp/static/js/787.2be6732c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5718c78c.css",
-    "static/js/main.885424e1.js"
+    "static/js/main.6e75bffd.js"
   ]
 }
