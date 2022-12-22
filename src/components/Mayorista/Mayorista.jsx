@@ -31,9 +31,9 @@ export const Mayorista = () => {
                         </Col>
                         <Col lg>
                             <h4 className="tituloMayorista pb-2 pt-4">Selección</h4>
-                            <p className="textMayorista pb-2 ">Seleccionamos nuestros cafés de orígenes distintivos como Panamá, Etiopía, Colombia, Uganda y por supuesto Brasil, de donde viene nuestro café de la casa, que replicamos en varios locales. Nuestros proveedores son reconocidos cafeteros de la talla de Panama Varietals, Latorre & Dutch y OurCoffees Inc./Campos Altos.</p>
+                            <p className="textMayorista pb-2 ">Seleccionamos nuestros cafés de orígenes como Brasil, Costa Rica, Kenia, Etiopía y, por supuesto, Colombia. Nuestro café de la casa proviene de la región de Alta Mogiana, en Brasil. Nuestros proveedores son reconocidos cafeteros de talla internacional.</p>
                             <h4 className="tituloMayorista pb-2">Know-how</h4>
-                            <p className="textMayorista">Tostamos en nuestra máquina Probatone de 12kgs, de marca Probat, Alemana e importada de Austria. Nuestra Roaster Ernesto vivió más de 13 años en el exterior y comenzó sus pasos tostando café en el famoso tostador austríaco 220Grad, donde se familiarizó con la técnica del tueste y el manejo de cafés de orígenes tan variados como los Panameños o Etíopes, pasando por los Brasileños. Desarrollamos curvas de tueste y perfiles de sabor únicos y pensados para los granos específicos que tostamos, teniendo en cuenta su terroir, cosecha, varietal, altitud y utilización proyectada. Utilizamos el software Cropster para poder ver cada curva de tueste y asegurar la consistencia necesaria para cada lote.</p>
+                            <p className="textMayorista">Tostamos en nuestra máquina Probatone de 12kgs, de marca Probat, Alemana e importada de Austria. Nuestra Roaster Ernestina vivió unos 5 años en el exterior y comenzó sus pasos tostando café en el famoso tostador Robert Schure donde se familiarizó con la técnica del tueste y el manejo de cafés de distintos orígenes. Desarrollamos curvas de tueste y perfiles de sabor únicos y pensados para los granos específicos que tostamos, teniendo en cuenta su terroir, cosecha, varietal, altitud y utilización proyectada. Utilizamos el software Cropster para poder ver cada curva de tueste y asegurar la consistencia necesaria para cada lote.</p>
                         </Col>
                     </Row>
                 </Container>
@@ -41,9 +41,9 @@ export const Mayorista = () => {
                 <Row className="pt-4">
                         <Col lg className="colMayorista1">
                             <h4 className="tituloMayorista pb-2 pt-4">Nuestros clientes</h4>
-                            <p className="textMayorista pb-2 ">Ya sea que tengas un restaurante, una cafetería, hotel, oficina o una plataforma de venta en la cual quieras sumar una experiencia verdaderamente distinta e incomparable, aquí estamos para ayudarte.</p>
+                            <p className="textMayorista pb-2 ">Sea cual sea el emprendimiento que tengas (un restaurante, una cafetería, hotel o una plataforma de venta) en la cual quieras sumar una experiencia distinta e inigualable, aquí estamos para ayudarte.</p>
                             <h4 className="tituloMayorista pb-2">Servicio</h4>
-                            <p className="textMayorista pb-2">Te ofrecemos un servicio de post-venta ajustado a tus necesidades para que puedas mantener los estándares de calidad que nuestros cafés requieren y tus consumidores van a apreciar, en el día a día. Esto incluye capacitaciones a tu personal a través de nuestro departamento de calidad de café, nuestra roaster y nuestros baristas. Además, te daremos acceso a nuestras herramientas de trabajo y educación para que puedas consultarlas cuando sea necesario.</p>
+                            <p className="textMayorista pb-2">Te ofrecemos un servicio de post-venta ajustado a tus necesidades para que puedas mantener los estándares de calidad en el día a día. Esto incluye capacitaciones a tu personal a través de nuestro departamento de calidad de café. Además, te daremos acceso a nuestras herramientas de trabajo y educación para que puedas consultarlas cuando sea necesario.</p>
                         </Col>
                         <Col lg className="colMayorista2 d-flex justify-content-md-center">
                             <Image fluid src={Img2} alt="dibujoCafeconLeche" />
